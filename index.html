@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaleem Ullah Qasim | LLM Reasoning and Efficient Inference</title>
+<meta name="description" content="Kaleem Ullah Qasim, PhD in Computer Science (Southwest Jiaotong University). Research on LLM reasoning, multi-agent coordination, KV cache compression and on-device NPU inference.">
+<meta property="og:title" content="Kaleem Ullah Qasim">
+<meta property="og:description" content="Research on LLM reasoning, multi-agent coordination and efficient inference.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="photo.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+<nav>
+  <div class="inner">
+    <a class="brand" href="#top">Kaleem Ullah Qasim</a>
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#software">Software</a>
+    <a href="#cv">CV</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<aside>
+  <img src="photo.jpg" alt="Portrait of Kaleem Ullah Qasim" width="190" height="190">
+  <p class="name">Kaleem Ullah Qasim</p>
+  <p class="role">PhD in Computer Science and Technology<br>Southwest Jiaotong University<br>Chengdu, China</p>
+  <ul>
+    <li><span>Email</span><a href="mailto:kaleem@my.swjtu.edu.cn">kaleem@my.swjtu.edu.cn</a></li>
+    <li><span>Scholar</span><a href="https://scholar.google.com/citations?user=MIH9DcUAAAAJ">Google Scholar</a></li>
+    <li><span>ORCID</span><a href="https://orcid.org/0000-0002-0102-3816">0000-0002-0102-3816</a></li>
+    <li><span>GitHub</span><a href="https://github.com/Kaleemullahqasim">Kaleemullahqasim</a></li>
+    <li><span>LinkedIn</span><a href="https://linkedin.com/in/kaleemqasim">kaleemqasim</a></li>
+  </ul>
+  <p class="open">Open to postdoctoral and faculty positions starting in 2027.</p>
+</aside>
+
+<main>
+
+<section id="about">
+  <h1>About me</h1>
+  <p>I work on making language models reason in ways that can be checked, and on making them cheap enough to run where the work is: small models, bounded memory, consumer hardware.</p>
+  <p>My research covers structured and verifiable reasoning in large and small language models, reinforcement learning with verifiable rewards, decentralised multi-agent coordination, LLM reliability evaluation (hallucination detection and memory faithfulness), and efficient inference (KV cache compression and on-device NPU deployment).</p>
+  <p>I passed my PhD defence at Southwest Jiaotong University on 30 October 2026, advised by Prof. Jiashu Zhang. I am the technical lead on a research contract commissioned by Huawei on recursive reasoning agents, and I led a research team of three master's students and two PhD students during my doctoral studies.</p>
+  <p>I have written 24 papers: 14 are published or accepted and 10 are under review or revision. I am first author on 17 of them.</p>
+</section>
+
+<section id="news">
+  <h2>News</h2>
+  <ul class="rows">
+    <li><span class="when">Oct 2026</span><span>Passed my PhD defence at Southwest Jiaotong University.</span></li>
+    <li><span class="when">2026</span><span>Residual Replay paper on multi-agent communication published in <i>Knowledge-Based Systems</i>.</span></li>
+    <li><span class="when">Aug 2026</span><span>MARBLE published (Early Access) in <i>IEEE Transactions on Intelligent Transportation Systems</i>.</span></li>
+    <li><span class="when">Aug 2026</span><span>Destroy-Repair of Reasoning Chains published online in <i>Information Sciences</i>.</span></li>
+    <li><span class="when">Jan 2026</span><span>Started as technical lead on a Huawei-commissioned research contract on recursive reasoning agents.</span></li>
+    <li><span class="when">Dec 2025</span><span>Presented Complexity Aware Recursive Decomposition at EILM '25 in Chengdu.</span></li>
+  </ul>
+</section>
+
+<section id="research">
+  <h2>What I am working on</h2>
+  <div class="block">
+    <h3>Structured and verifiable reasoning</h3>
+    <p>RDoLT [J3] replaced the single long chain of thought with a verified sub-problem tree that carries knowledge between branches, outperforming chain-of-thought and tree-of-thought prompting on GSM8K, MATH and MMLU-STEM. The programme since then pushes on three fronts: process-level verifiable rewards trained with GRPO [S4, S5], curriculum-scheduled recursion depth [J10, C2], and a destroy-repair search over reasoning chains that improves small models with no additional training [J8].</p>
+  </div>
+  <div class="block">
+    <h3>Efficient inference and the KV cache</h3>
+    <p>A sustained argument that the KV cache is largely redundant. Exact recovery of keys and values from the residual stream permits lossless decoding at bounded memory [R2]; stabilising that stream lets a decoder be trained cache-free from the outset [J9]; and characterising reachable cache states bounds what any residual compression scheme can achieve in hybrid-attention models [S2].</p>
+  </div>
+  <div class="block">
+    <h3>On-device reasoning on consumer NPUs</h3>
+    <p>Published on-device numbers are frequently invalid because the model silently falls back to CPU or GPU. I built a four-signal residency protocol that gates every measurement, applied it to LUT4/6/8 and FP16 builds of Llama-3.2-1B on the Apple Neural Engine, and exposed a precision-independent weight-traffic floor in the decode path that caps achievable speedup [S6].</p>
+  </div>
+  <div class="block">
+    <h3>Decentralised multi-agent coordination</h3>
+    <p>Identical frozen agents that organise themselves through local rules rather than a central orchestrator, with the rules taken from biology and tested honestly, including where the analogy breaks. Task-dependent latent collaboration decides when agents should share state at all [S1]; residual replay makes agent-to-agent communication compact and lossless [J11].</p>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="note">Also on <a href="https://scholar.google.com/citations?user=MIH9DcUAAAAJ">Google Scholar</a>. My name is in bold.</p>
+
+  <h4>Journal articles</h4>
+  <ol class="pubs">
+    <li><span class="tag">J11</span><div>
+      <span class="title">Compact and Lossless Latent Communication for Multi-Agent Systems via Residual Replay</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, C. Zhao, M. K. Shaheen</span>
+      <span class="venue"><i>Knowledge-Based Systems</i>, 117264, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.knosys.2026.117264">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J10</span><div>
+      <span class="title">Accelerating Training Speed of Tiny Recursive Models with Curriculum Guided Adaptive Recursion</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. K. Shaheen</span>
+      <span class="venue"><i>Neural Networks</i>, vol. 206, 109720, 2027. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.neunet.2026.109720">DOI</a><a class="btn" href="https://github.com/Kaleemullahqasim/CGAR">Code</a></span>
+    </div></li>
+    <li><span class="tag">J9</span><div>
+      <span class="title">Key-Value-Free Transformers: Training Cacheless Decoders via Residual Stream Stabilisation</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, R. Alharith</span>
+      <span class="venue"><i>Engineering Applications of Artificial Intelligence</i>, vol. 185, 116397, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.engappai.2026.116397">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J8</span><div>
+      <span class="title">Destroy-Repair of Reasoning Chains via Adaptive Large Neighborhood Search in Small Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. W. Aslam, M. K. Shaheen</span>
+      <span class="venue"><i>Information Sciences</i>, 758, 123959, 2027. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.ins.2026.123959">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J7</span><div>
+      <span class="title">MARBLE: A Multi-Agent Rule-Based LLM Reasoning Engine for Accident Severity Prediction</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang</span>
+      <span class="venue"><i>IEEE Transactions on Intelligent Transportation Systems</i>, Early Access, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1109/TITS.2026.3715630">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J6</span><div>
+      <span class="title">Efficient Deep Learning for Medical Image Segmentation: A Unified Cross-Paradigm Survey and Controlled Deployment Benchmark of CNN, Transformer and Mamba Architectures</span>
+      <span class="authors">R. Alharith, M. A. Al-antari, <b>Kaleem Ullah Qasim</b>, Z. Al-Huda, Y. H. Gu</span>
+      <span class="venue"><i>Archives of Computational Methods in Engineering</i>, accepted 2026. <span class="rank">SCI, JCR Q1.</span></span>
+    </div></li>
+    <li><span class="tag">J5</span><div>
+      <span class="title">Carbon-Aware Scheduling via Adaptive Large Neighborhood Search with Destroy-Repair Mechanisms for Integrated Maintenance Planning on Parallel Machines</span>
+      <span class="authors">M. W. Aslam, Z. Zhang, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Journal of Manufacturing Systems</i>, 88, 261-278, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.jmsy.2026.06.006">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J4</span><div>
+      <span class="title">CORTEX-V: A Cognitive Reasoning Toolkit for Vision-Based, Cost-Efficient Layout Optimization</span>
+      <span class="authors">M. W. Aslam, Z. Zhang, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Computers &amp; Operations Research</i>, 190, 107413, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.cor.2026.107413">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J3</span><div>
+      <span class="title">Recursive Decomposition of Logical Thoughts: Framework for Superior Reasoning and Knowledge Propagation in Large Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, T. Alsahfi, A. U. R. Butt</span>
+      <span class="venue"><i>Journal of Artificial Intelligence Research</i>, 83, Article 27, 2025. <span class="rank">SCI, SJR Q1, CCF-B.</span> <a class="btn" href="https://doi.org/10.1613/jair.1.18562">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J2</span><div>
+      <span class="title">TraffiCoT-R: A Framework for Advanced Spatio-Temporal Reasoning in Large Language Models</span>
+      <span class="authors">T. Alsahfi, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Alexandria Engineering Journal</i>, 128, 464-475, 2025. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.aej.2025.05.027">DOI</a></span>
+    </div></li>
+    <li><span class="tag">J1</span><div>
+      <span class="title">From Data to Decisions: Enhancing Financial Forecasts with LSTM for AI Token Prices</span>
+      <span class="authors">R. Ali, J. Xu, M. H. Baig, H. S. U. Rehman, M. W. Aslam, <b>Kaleem Ullah Qasim</b> (corresponding author)</span>
+      <span class="venue"><i>Journal of Economic Studies</i>, 51(8), 1677-1693, 2024. <span class="rank">SSCI, JCR Q2.</span> <a class="btn" href="https://doi.org/10.1108/JES-01-2024-0022">DOI</a></span>
+    </div></li>
+  </ol>
+
+  <h4>Conference papers and book chapters</h4>
+  <ol class="pubs">
+    <li><span class="tag">C3</span><div>
+      <span class="title">Traceable and Revokable Attributes-Based Verifiable Searchable Authentication Scheme for Blockchain Data Sharing</span>
+      <span class="authors">M. Ali, H. He, A. Hussain, M. Hussain, <b>Kaleem Ullah Qasim</b> (corresponding author)</span>
+      <span class="venue"><i>AI Revolution: Research, Ethics and Society</i>, CCIS, Springer, 68-88, 2026. <span class="rank">EI.</span> <a class="btn" href="https://doi.org/10.1007/978-3-032-12930-7_6">DOI</a></span>
+    </div></li>
+    <li><span class="tag">C2</span><div>
+      <span class="title">Complexity Aware Recursive Decomposition for Math Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. S. Ur Rehman</span>
+      <span class="venue"><i>Proc. International Conference on Embodied Intelligence and Large Models (EILM '25)</i>, ACM, 118-121, 2025. <span class="rank">EI.</span> <a class="btn" href="https://doi.org/10.1145/3788731.3788750">DOI</a></span>
+    </div></li>
+    <li><span class="tag">C1</span><div>
+      <span class="title">Understanding the Business of Online Affiliate Marketing: An Empirical Study</span>
+      <span class="authors">H. Xu, Y. Sun, <b>Kaleem Ullah Qasim</b>, S. Hao, W. Ma, Z. Li, F. Zhang, M. Han, Z. Li</span>
+      <span class="venue"><i>IEEE INFOCOM 2025</i>, 1-10. <span class="rank">EI, CCF-A.</span> <a class="btn" href="https://doi.org/10.1109/INFOCOM55648.2025.11044696">DOI</a></span>
+    </div></li>
+  </ol>
+
+  <h4>Under revision (reviews received, revision invited)</h4>
+  <ol class="pubs">
+    <li><span class="tag">R2</span><div>
+      <span class="title">KV-Direct: Lossless Bounded-Memory Inference via Exact KV Recovery from the Residual Stream</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, R. Alharith, H. Zhang</span>
+      <span class="venue"><i>Journal of Systems Architecture</i>. Revision in progress.</span>
+    </div></li>
+    <li><span class="tag">R1</span><div>
+      <span class="title">Recursive Decomposition Cache: Hierarchical Query Decomposition for Semantic Caching Optimization</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, H. S. U. Rehman</span>
+      <span class="venue"><i>Neurocomputing</i>. Second revised manuscript submitted.</span>
+    </div></li>
+  </ol>
+
+  <h4>Under review</h4>
+  <ol class="pubs">
+    <li><span class="tag">S7</span><div>
+      <span class="title">When a Detector Trusts a Lie: Auditing Hallucination Detectors with Planted False Beliefs</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. W. Aslam</span>
+      <span class="venue"><i>IEEE/ACM Transactions on Audio, Speech and Language Processing</i></span>
+    </div></li>
+    <li><span class="tag">S6</span><div>
+      <span class="title">Verified-Residency Quantization for On-Device NPU Reasoning: A Case Study on the Apple Neural Engine</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, C. Zhao, M. K. Shaheen</span>
+      <span class="venue"><i>IEEE Transactions on Mobile Computing</i></span>
+    </div></li>
+    <li><span class="tag">S5</span><div>
+      <span class="title">TRACE-VD: Trace-Verified Distillation via Certification-Weighted Self-Imitation for LLM Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, M. W. Aslam</span>
+      <span class="venue"><i>Applied Soft Computing</i></span>
+    </div></li>
+    <li><span class="tag">S4</span><div>
+      <span class="title">Recursive Arithmetic Decomposition and Reinforcement Learning for Verifiable Reasoning in Small Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. W. Aslam, M. K. Shaheen</span>
+      <span class="venue"><i>IEEE Transactions on Emerging Topics in Computational Intelligence</i></span>
+    </div></li>
+    <li><span class="tag">S3</span><div>
+      <span class="title">VERIFY-RL: Verifiable Recursive Decomposition and Curriculum Reinforcement Learning for Mathematical Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, M. K. Shaheen</span>
+      <span class="venue"><i>Cognitive Systems Research</i></span>
+    </div></li>
+    <li><span class="tag">S2</span><div>
+      <span class="title">The Sliding Window Wall: Characterising Reachable KV Cache and the Limits of Residual Compression in Hybrid-Attention Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, R. Alharith</span>
+      <span class="venue"><i>The Journal of Supercomputing</i></span>
+    </div></li>
+    <li><span class="tag">S1</span><div>
+      <span class="title">Task-Dependent Latent Collaboration in Multi-Agent Systems</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. K. Shaheen</span>
+      <span class="venue"><i>Information Fusion</i></span>
+    </div></li>
+  </ol>
+  <p class="note">One further manuscript is under anonymous review and is not listed here.</p>
+</section>
+
+<section id="software">
+  <h2>Research software</h2>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/CGAR">CGAR: curriculum-guided adaptive recursion</a></h3>
+    <p>Full training and evaluation code for [J10]. A progressive depth curriculum plus hierarchical supervision weighting cuts training time for tiny recursive models from 10.93 to 6.38 hours on 423,168 Sudoku-Extreme puzzles, a 1.71x speedup for 0.63 points of accuracy.</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/NL-CGAR">NL-CGAR: natural-language access to recursive experts</a></h3>
+    <p>Routes natural-language problems to curriculum-guided recursive experts, with run scripts, datasets and result files.</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/openbanana">OpenBanana: editable diagram recovery</a></h3>
+    <p>Uses fine-tuned SAM3 segmentation and local vision-language models to convert diagrams in images and PDFs into editable DrawIO XML.</p>
+  </div>
+  <div class="block">
+    <h3>Apple Neural Engine inference and profiling harness</h3>
+    <p>CoreML and anemll toolchain for converting, quantising and profiling language models on the ANE, including the four-signal residency protocol used in [S6]. It rejects any measurement that silently falls back to another compute unit.</p>
+  </div>
+  <div class="block">
+    <h3>Reasoning evaluation harness</h3>
+    <p>Reproducible multi-model, multi-benchmark runner across MLX, vLLM and HuggingFace backends (GSM8K, MATH-500, AIME, U-MATH), used for the experiments in [J8], [J10], [S3] and [S4].</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim">Paper repositories</a></h3>
+    <p>One public repository per manuscript for the KV cache and multi-agent lines: KV-Direct, KV-Free-Transformers, sliding-window-wall, latent-collab-mas and RDC. Full implementations are released paper by paper on acceptance.</p>
+  </div>
+</section>
+
+<section id="cv">
+  <h2>Education</h2>
+  <ul class="rows">
+    <li><span class="when">2022 to 2026</span><span><b>Ph.D. in Computer Science and Technology</b>, Southwest Jiaotong University, School of Computing and Artificial Intelligence. Advisor: Prof. Jiashu Zhang. Defence passed 30 October 2026.</span></li>
+    <li><span class="when">2019 to 2022</span><span><b>Master in Computer Application Technology</b>, Southwestern University of Finance and Economics, Chengdu. Focus: natural language processing, machine learning, deep learning.</span></li>
+  </ul>
+
+  <h2>Research appointments</h2>
+  <ul class="rows">
+    <li><span class="when">2026 to present</span><span><b>Technical Lead, Recursive Reasoning Agents.</b> Research contract commissioned by Huawei and held by SWJTU (principal investigator: Prof. Jiashu Zhang). Designed the planner and memory modules of a recursive-decomposition agent and implemented the reinforcement learning training loop on the Huawei Ascend platform.</span></li>
+    <li><span class="when">2024 to present</span><span><b>Research Collaborator, Spatio-Temporal Reasoning</b>, University of Jeddah (Dr. Tariq Alsahfi). Co-authored TraffiCoT-R [J2], coupling chain-of-thought prompting with multi-agent coordination over GIS data and graph neural networks.</span></li>
+    <li><span class="when">2022 to 2024</span><span><b>Research Collaborator, AI Security and Web Measurement</b>, Zhejiang University (Dr. Haitao Xu). Empirical measurement study of the online affiliate marketing ecosystem, published at IEEE INFOCOM 2025 [C1].</span></li>
+  </ul>
+
+  <h2>Funding</h2>
+  <ul class="rows">
+    <li><span class="when">2026 to 2027</span><span><b>Huawei Technologies, commissioned research contract.</b> Technical lead. Awarded following the publication of RDoLT [J3].</span></li>
+    <li><span class="when">2024 to present</span><span><b>National Natural Science Foundation of China, grant 62471411.</b> Participating researcher (principal investigator: Prof. Jiashu Zhang).</span></li>
+  </ul>
+
+  <h2>Honours and scholarships</h2>
+  <ul class="rows">
+    <li><span class="when">2025, 2026</span><span>Excellent Academic Paper Award for International Students, SWJTU</span></li>
+    <li><span class="when">2022</span><span>Chinese Government Scholarship (CSC), doctoral study at SWJTU</span></li>
+    <li><span class="when">2019</span><span>Silk Road Scholarship, master's study at SWUFE</span></li>
+    <li><span class="when">2016</span><span>Scholarship for study in China, two years at Beijing Language and Culture University</span></li>
+  </ul>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Reasoning and alignment</dt><dd>Recursive decomposition, process reward models, RLHF (PPO, REINFORCE), DPO, GRPO, verifiable-reward RL, TRL, verl, OpenRLHF</dd>
+    <dt>Multi-agent systems</dt><dd>Agent orchestration, task decomposition, communication protocols, agent memory, LangGraph, AutoGen, CrewAI, MCP</dd>
+    <dt>Training and inference</dt><dd>PyTorch, HuggingFace (Transformers, PEFT, Accelerate), SFT, LoRA, QLoRA, vLLM, quantisation (GGUF, LUT, 4/8-bit), MLX and CoreML on Apple silicon, Huawei Ascend</dd>
+    <dt>Retrieval and evaluation</dt><dd>RAG architecture, hybrid semantic and lexical search, Qdrant, Pinecone, Weaviate, lm-evaluation-harness, OpenCompass</dd>
+    <dt>Languages</dt><dd>English (fluent), Chinese (HSK 5 and HSKK Intermediate), Urdu (native), Hindi (fluent)</dd>
+  </dl>
+</section>
+
+</main>
+</div>
+
+<footer>&copy; 2026 Kaleem Ullah Qasim. Last updated November 2026.</footer>
+
+</body>
+</html>
