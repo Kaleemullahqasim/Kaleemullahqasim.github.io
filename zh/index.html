@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaleem Ullah Qasim | 大语言模型推理、多智能体协作与高效推理研究</title>
+<meta name="description" content="Kaleem Ullah Qasim，西南交通大学计算机科学与技术博士，研究大语言模型推理、可验证奖励强化学习、多智能体协作、KV 缓存压缩与端侧 NPU 推理。论文、代码与履历。">
+<meta name="author" content="Kaleem Ullah Qasim">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1f4e79">
+<link rel="canonical" href="https://kaleemullahqasim.github.io/zh/">
+<link rel="alternate" hreflang="en" href="https://kaleemullahqasim.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://kaleemullahqasim.github.io/zh/">
+<link rel="alternate" hreflang="x-default" href="https://kaleemullahqasim.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Kaleem Ullah Qasim">
+<meta property="og:title" content="Kaleem Ullah Qasim | 大语言模型推理、多智能体协作与高效推理研究">
+<meta property="og:description" content="Kaleem Ullah Qasim，西南交通大学计算机科学与技术博士，研究大语言模型推理、可验证奖励强化学习、多智能体协作、KV 缓存压缩与端侧 NPU 推理。论文、代码与履历。">
+<meta property="og:url" content="https://kaleemullahqasim.github.io/zh/">
+<meta property="og:image" content="https://kaleemullahqasim.github.io/photo.jpg">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="profile:first_name" content="Kaleem Ullah">
+<meta property="profile:last_name" content="Qasim">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kaleem Ullah Qasim | 大语言模型推理、多智能体协作与高效推理研究">
+<meta name="twitter:description" content="Kaleem Ullah Qasim，西南交通大学计算机科学与技术博士，研究大语言模型推理、可验证奖励强化学习、多智能体协作、KV 缓存压缩与端侧 NPU 推理。论文、代码与履历。">
+<meta name="twitter:image" content="https://kaleemullahqasim.github.io/photo.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ProfilePage", "inLanguage": "zh-CN", "url": "https://kaleemullahqasim.github.io/zh/", "mainEntity": {"@type": "Person", "name": "Kaleem Ullah Qasim", "alternateName": ["Kaleem Qasim", "K. U. Qasim"], "url": "https://kaleemullahqasim.github.io/", "image": "https://kaleemullahqasim.github.io/photo.jpg", "jobTitle": "AI Researcher, PhD in Computer Science and Technology", "description": "Researcher in LLM reasoning, multi-agent coordination, KV cache compression and on-device NPU inference.", "affiliation": {"@type": "CollegeOrUniversity", "name": "Southwest Jiaotong University", "alternateName": "西南交通大学", "url": "https://www.swjtu.edu.cn/"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Southwest Jiaotong University"}, {"@type": "CollegeOrUniversity", "name": "Southwestern University of Finance and Economics"}], "address": {"@type": "PostalAddress", "addressLocality": "Chengdu", "addressCountry": "CN"}, "email": "mailto:kaleem@my.swjtu.edu.cn", "knowsAbout": ["Large language models", "LLM reasoning", "Small language models", "Recursive decomposition", "Reinforcement learning with verifiable rewards", "Multi-agent systems", "KV cache compression", "Efficient inference", "On-device NPU inference", "Hallucination detection"], "knowsLanguage": ["en", "zh", "ur", "hi"], "sameAs": ["https://scholar.google.com/citations?user=MIH9DcUAAAAJ", "https://orcid.org/0000-0002-0102-3816", "https://github.com/Kaleemullahqasim", "https://linkedin.com/in/kaleemqasim"]}}
+</script>
+</head>
+<body id="top">
+
+<nav>
+  <div class="inner">
+    <a class="brand" href="#top">Kaleem Ullah Qasim</a>
+    <a href="#about">简介</a>
+    <a href="#news">动态</a>
+    <a href="#research">研究</a>
+    <a href="#publications">论文</a>
+    <a href="#software">软件</a>
+    <a href="#cv">履历</a>
+    <a class="lang" href="../" hreflang="en" lang="en" title="Switch to English">EN</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<aside>
+  <img src="../photo.jpg" alt="Kaleem Ullah Qasim 的照片" width="176" height="176">
+  <h1 class="name">Kaleem Ullah Qasim</h1>
+  <p class="role">计算机科学与技术博士<br>西南交通大学<br>中国成都</p>
+  <ul>
+    <li><span>邮箱</span><a href="mailto:kaleem@my.swjtu.edu.cn">kaleem@my.swjtu.edu.cn</a></li>
+    <li><span>谷歌学术</span><a href="https://scholar.google.com/citations?user=MIH9DcUAAAAJ">Google Scholar</a></li>
+    <li><span>ORCID</span><a href="https://orcid.org/0000-0002-0102-3816">0000-0002-0102-3816</a></li>
+    <li><span>GitHub</span><a href="https://github.com/Kaleemullahqasim">Kaleemullahqasim</a></li>
+    <li><span>领英</span><a href="https://linkedin.com/in/kaleemqasim">kaleemqasim</a></li>
+  </ul>
+  <p class="open">正在寻求 2027 年起的博士后及教职岗位。</p>
+</aside>
+
+<main>
+
+<section id="about">
+  <h2 class="top">个人简介</h2>
+  <p class="lead">我的研究目标是让语言模型的推理过程可以被检验，并让模型足够轻量，能够在真正需要的地方运行：小模型、有界显存、消费级硬件。</p>
+  <p>研究方向包括：大语言模型与小语言模型的结构化可验证推理、可验证奖励强化学习、去中心化多智能体协作、大语言模型可靠性评测（幻觉检测与记忆忠实性），以及高效推理（KV 缓存压缩与端侧 NPU 部署）。</p>
+  <p>我于 2026 年 10 月 30 日在西南交通大学通过博士学位论文答辩，导师为张家树教授。目前担任华为技术有限公司委托的递归推理智能体研究课题的技术负责人；博士期间组织并带领由 3 名硕士生和 2 名博士生组成的科研团队。</p>
+  <p>共撰写论文 24 篇：14 篇已发表或已录用，10 篇在审或返修；其中第一作者 17 篇。</p>
+</section>
+
+<section id="news">
+  <h2>近期动态</h2>
+  <ul class="rows">
+    <li><span class="when">2026 年 10 月</span><span>通过西南交通大学博士学位论文答辩。</span></li>
+    <li><span class="when">2026 年</span><span>残差回放（Residual Replay）多智能体通信论文发表于 <i>Knowledge-Based Systems</i>。</span></li>
+    <li><span class="when">2026 年 8 月</span><span>MARBLE 在 <i>IEEE Transactions on Intelligent Transportation Systems</i> 在线发表（Early Access）。</span></li>
+    <li><span class="when">2026 年 8 月</span><span>推理链破坏与修复（Destroy-Repair）论文在 <i>Information Sciences</i> 在线发表。</span></li>
+    <li><span class="when">2026 年 1 月</span><span>开始担任华为委托的递归推理智能体研究课题技术负责人。</span></li>
+    <li><span class="when">2025 年 12 月</span><span>在 EILM '25（中国成都）报告论文 Complexity Aware Recursive Decomposition。</span></li>
+  </ul>
+</section>
+
+<section id="research">
+  <h2>主要研究方向</h2>
+  <div class="block">
+    <h3>结构化与可验证推理</h3>
+    <p>RDoLT [<a class="ref" href="#J3">J3</a>] 以可验证的子问题树取代单一长思维链，并在分支间传播已确认知识，在 GSM8K、MATH 与 MMLU-STEM 上超越思维链与思维树提示。此后该方向沿三条路径推进：结合 GRPO 的过程级可验证奖励训练 [<a class="ref" href="#S4">S4</a>, <a class="ref" href="#S5">S5</a>]、课程调度的递归深度 [<a class="ref" href="#J10">J10</a>, <a class="ref" href="#C2">C2</a>]，以及无需额外训练即可提升小模型的推理链破坏与修复搜索 [<a class="ref" href="#J8">J8</a>]。</p>
+  </div>
+  <div class="block">
+    <h3>高效推理与 KV 缓存</h3>
+    <p>围绕「KV 缓存在很大程度上是冗余的」这一论点展开。从残差流中精确恢复键值可实现有界显存下的无损解码 [<a class="ref" href="#R2">R2</a>]；对残差流施加稳定化训练可使解码器自始即无需缓存 [<a class="ref" href="#J9">J9</a>]；刻画可达缓存状态则界定了任何残差压缩方案在混合注意力模型中的能力上界 [<a class="ref" href="#S2">S2</a>]。</p>
+  </div>
+  <div class="block">
+    <h3>消费级 NPU 端侧推理</h3>
+    <p>已有端侧推理数据常因模型静默回退至 CPU 或 GPU 而失效。我构建了四信号驻留验证协议对每次测量加以门控，应用于 Llama-3.2-1B 的 LUT4/6/8 与 FP16 版本，在苹果神经引擎上揭示了解码路径中与精度无关的权重访存下界，该下界限制了可达加速比 [<a class="ref" href="#S6">S6</a>]。</p>
+  </div>
+  <div class="block">
+    <h3>去中心化多智能体协作</h3>
+    <p>同构冻结智能体依靠局部规则而非中心调度器实现自组织，协作规则取自生物学，并如实报告类比失效之处。任务相关的隐空间协作决定智能体何时需要共享状态 [<a class="ref" href="#S1">S1</a>]；残差回放使智能体间通信紧凑且无损 [<a class="ref" href="#J11">J11</a>]。</p>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>学术论文</h2>
+  <p class="note">另见<a href="https://scholar.google.com/citations?user=MIH9DcUAAAAJ">谷歌学术</a>。本人姓名以粗体标示，论文题目保留英文原文。</p>
+
+  <h4>期刊论文</h4>
+  <ol class="pubs">
+    <li id="J11"><span class="tag">J11</span><div>
+      <span class="title">Compact and Lossless Latent Communication for Multi-Agent Systems via Residual Replay</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, C. Zhao, M. K. Shaheen</span>
+      <span class="venue"><i>Knowledge-Based Systems</i>, 117264, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.knosys.2026.117264">DOI</a></span>
+    </div></li>
+    <li id="J10"><span class="tag">J10</span><div>
+      <span class="title">Accelerating Training Speed of Tiny Recursive Models with Curriculum Guided Adaptive Recursion</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. K. Shaheen</span>
+      <span class="venue"><i>Neural Networks</i>, vol. 206, 109720, 2027. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.neunet.2026.109720">DOI</a><a class="btn" href="https://github.com/Kaleemullahqasim/CGAR">代码</a></span>
+    </div></li>
+    <li id="J9"><span class="tag">J9</span><div>
+      <span class="title">Key-Value-Free Transformers: Training Cacheless Decoders via Residual Stream Stabilisation</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, R. Alharith</span>
+      <span class="venue"><i>Engineering Applications of Artificial Intelligence</i>, vol. 185, 116397, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.engappai.2026.116397">DOI</a></span>
+    </div></li>
+    <li id="J8"><span class="tag">J8</span><div>
+      <span class="title">Destroy-Repair of Reasoning Chains via Adaptive Large Neighborhood Search in Small Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. W. Aslam, M. K. Shaheen</span>
+      <span class="venue"><i>Information Sciences</i>, 758, 123959, 2027. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.ins.2026.123959">DOI</a></span>
+    </div></li>
+    <li id="J7"><span class="tag">J7</span><div>
+      <span class="title">MARBLE: A Multi-Agent Rule-Based LLM Reasoning Engine for Accident Severity Prediction</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang</span>
+      <span class="venue"><i>IEEE Transactions on Intelligent Transportation Systems</i>, Early Access, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1109/TITS.2026.3715630">DOI</a></span>
+    </div></li>
+    <li id="J6"><span class="tag">J6</span><div>
+      <span class="title">Efficient Deep Learning for Medical Image Segmentation: A Unified Cross-Paradigm Survey and Controlled Deployment Benchmark of CNN, Transformer and Mamba Architectures</span>
+      <span class="authors">R. Alharith, M. A. Al-antari, <b>Kaleem Ullah Qasim</b>, Z. Al-Huda, Y. H. Gu</span>
+      <span class="venue"><i>Archives of Computational Methods in Engineering</i>, 已录用，2026。 <span class="rank">SCI, JCR Q1.</span></span>
+    </div></li>
+    <li id="J5"><span class="tag">J5</span><div>
+      <span class="title">Carbon-Aware Scheduling via Adaptive Large Neighborhood Search with Destroy-Repair Mechanisms for Integrated Maintenance Planning on Parallel Machines</span>
+      <span class="authors">M. W. Aslam, Z. Zhang, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Journal of Manufacturing Systems</i>, 88, 261-278, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.jmsy.2026.06.006">DOI</a></span>
+    </div></li>
+    <li id="J4"><span class="tag">J4</span><div>
+      <span class="title">CORTEX-V: A Cognitive Reasoning Toolkit for Vision-Based, Cost-Efficient Layout Optimization</span>
+      <span class="authors">M. W. Aslam, Z. Zhang, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Computers &amp; Operations Research</i>, 190, 107413, 2026. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.cor.2026.107413">DOI</a></span>
+    </div></li>
+    <li id="J3"><span class="tag">J3</span><div>
+      <span class="title">Recursive Decomposition of Logical Thoughts: Framework for Superior Reasoning and Knowledge Propagation in Large Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, T. Alsahfi, A. U. R. Butt</span>
+      <span class="venue"><i>Journal of Artificial Intelligence Research</i>, 83, Article 27, 2025. <span class="rank">SCI, SJR Q1, CCF-B.</span> <a class="btn" href="https://doi.org/10.1613/jair.1.18562">DOI</a></span>
+    </div></li>
+    <li id="J2"><span class="tag">J2</span><div>
+      <span class="title">TraffiCoT-R: A Framework for Advanced Spatio-Temporal Reasoning in Large Language Models</span>
+      <span class="authors">T. Alsahfi, <b>Kaleem Ullah Qasim</b></span>
+      <span class="venue"><i>Alexandria Engineering Journal</i>, 128, 464-475, 2025. <span class="rank">SCI, JCR Q1.</span> <a class="btn" href="https://doi.org/10.1016/j.aej.2025.05.027">DOI</a></span>
+    </div></li>
+    <li id="J1"><span class="tag">J1</span><div>
+      <span class="title">From Data to Decisions: Enhancing Financial Forecasts with LSTM for AI Token Prices</span>
+      <span class="authors">R. Ali, J. Xu, M. H. Baig, H. S. U. Rehman, M. W. Aslam, <b>Kaleem Ullah Qasim</b>（通讯作者）</span>
+      <span class="venue"><i>Journal of Economic Studies</i>, 51(8), 1677-1693, 2024. <span class="rank">SSCI, JCR Q2.</span> <a class="btn" href="https://doi.org/10.1108/JES-01-2024-0022">DOI</a></span>
+    </div></li>
+  </ol>
+
+  <h4>会议论文与著作章节</h4>
+  <ol class="pubs">
+    <li id="C3"><span class="tag">C3</span><div>
+      <span class="title">Traceable and Revokable Attributes-Based Verifiable Searchable Authentication Scheme for Blockchain Data Sharing</span>
+      <span class="authors">M. Ali, H. He, A. Hussain, M. Hussain, <b>Kaleem Ullah Qasim</b>（通讯作者）</span>
+      <span class="venue"><i>AI Revolution: Research, Ethics and Society</i>, CCIS, Springer, 68-88, 2026. <span class="rank">EI.</span> <a class="btn" href="https://doi.org/10.1007/978-3-032-12930-7_6">DOI</a></span>
+    </div></li>
+    <li id="C2"><span class="tag">C2</span><div>
+      <span class="title">Complexity Aware Recursive Decomposition for Math Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. S. Ur Rehman</span>
+      <span class="venue"><i>Proc. International Conference on Embodied Intelligence and Large Models (EILM '25)</i>, ACM, 118-121, 2025. <span class="rank">EI.</span> <a class="btn" href="https://doi.org/10.1145/3788731.3788750">DOI</a></span>
+    </div></li>
+    <li id="C1"><span class="tag">C1</span><div>
+      <span class="title">Understanding the Business of Online Affiliate Marketing: An Empirical Study</span>
+      <span class="authors">H. Xu, Y. Sun, <b>Kaleem Ullah Qasim</b>, S. Hao, W. Ma, Z. Li, F. Zhang, M. Han, Z. Li</span>
+      <span class="venue"><i>IEEE INFOCOM 2025</i>, 1-10. <span class="rank">EI, CCF-A.</span> <a class="btn" href="https://doi.org/10.1109/INFOCOM55648.2025.11044696">DOI</a></span>
+    </div></li>
+  </ol>
+
+  <h4>返修中（已收到审稿意见）</h4>
+  <ol class="pubs">
+    <li id="R2"><span class="tag">R2</span><div>
+      <span class="title">KV-Direct: Lossless Bounded-Memory Inference via Exact KV Recovery from the Residual Stream</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, R. Alharith, H. Zhang</span>
+      <span class="venue"><i>Journal of Systems Architecture</i>. 返修中。</span>
+    </div></li>
+    <li id="R1"><span class="tag">R1</span><div>
+      <span class="title">Recursive Decomposition Cache: Hierarchical Query Decomposition for Semantic Caching Optimization</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, H. S. U. Rehman</span>
+      <span class="venue"><i>Neurocomputing</i>. 已提交第二轮修改稿。</span>
+    </div></li>
+  </ol>
+
+  <h4>在审</h4>
+  <ol class="pubs">
+    <li id="S7"><span class="tag">S7</span><div>
+      <span class="title">When a Detector Trusts a Lie: Auditing Hallucination Detectors with Planted False Beliefs</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. W. Aslam</span>
+      <span class="venue"><i>IEEE/ACM Transactions on Audio, Speech and Language Processing</i></span>
+    </div></li>
+    <li id="S6"><span class="tag">S6</span><div>
+      <span class="title">Verified-Residency Quantization for On-Device NPU Reasoning: A Case Study on the Apple Neural Engine</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, C. Zhao, M. K. Shaheen</span>
+      <span class="venue"><i>IEEE Transactions on Mobile Computing</i></span>
+    </div></li>
+    <li id="S5"><span class="tag">S5</span><div>
+      <span class="title">TRACE-VD: Trace-Verified Distillation via Certification-Weighted Self-Imitation for LLM Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. K. Shaheen, M. W. Aslam</span>
+      <span class="venue"><i>Applied Soft Computing</i></span>
+    </div></li>
+    <li id="S4"><span class="tag">S4</span><div>
+      <span class="title">Recursive Arithmetic Decomposition and Reinforcement Learning for Verifiable Reasoning in Small Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, M. W. Aslam, M. K. Shaheen</span>
+      <span class="venue"><i>IEEE Transactions on Emerging Topics in Computational Intelligence</i></span>
+    </div></li>
+    <li id="S3"><span class="tag">S3</span><div>
+      <span class="title">VERIFY-RL: Verifiable Recursive Decomposition and Curriculum Reinforcement Learning for Mathematical Reasoning</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, M. K. Shaheen</span>
+      <span class="venue"><i>Cognitive Systems Research</i></span>
+    </div></li>
+    <li id="S2"><span class="tag">S2</span><div>
+      <span class="title">The Sliding Window Wall: Characterising Reachable KV Cache and the Limits of Residual Compression in Hybrid-Attention Language Models</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, H. Li, R. Alharith</span>
+      <span class="venue"><i>The Journal of Supercomputing</i></span>
+    </div></li>
+    <li id="S1"><span class="tag">S1</span><div>
+      <span class="title">Task-Dependent Latent Collaboration in Multi-Agent Systems</span>
+      <span class="authors"><b>Kaleem Ullah Qasim</b>, J. Zhang, R. Alharith, M. K. Shaheen</span>
+      <span class="venue"><i>Information Fusion</i></span>
+    </div></li>
+  </ol>
+  <p class="note">另有一篇论文正在匿名评审中，未在此列出。</p>
+</section>
+
+<section id="software">
+  <h2>科研软件与开源项目</h2>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/CGAR">CGAR：课程引导的自适应递归</a></h3>
+    <p>论文 [<a class="ref" href="#J10">J10</a>] 的完整训练与评测代码。渐进深度课程结合分层监督加权，在 423,168 道 Sudoku-Extreme 题目上将训练时间由 10.93 小时降至 6.38 小时（1.71 倍加速，准确率仅降 0.63 个百分点）。</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/NL-CGAR">NL-CGAR：面向递归专家的自然语言入口</a></h3>
+    <p>将自然语言问题路由至课程引导的递归专家模型，包含运行脚本、数据集与结果文件。</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim/openbanana">OpenBanana：可编辑图表还原</a></h3>
+    <p>基于微调 SAM3 分割与本地视觉语言模型，将静态图片与 PDF 中的图表还原为可编辑的 DrawIO XML。</p>
+  </div>
+  <div class="block">
+    <h3>苹果神经引擎推理与性能剖析工具链</h3>
+    <p>基于 CoreML 与 anemll 的模型转换、量化与端侧性能剖析工具链，内含论文 [<a class="ref" href="#S6">S6</a>] 使用的四信号驻留验证协议，可拒绝任何静默回退至其他计算单元的测量结果。</p>
+  </div>
+  <div class="block">
+    <h3>推理评测框架</h3>
+    <p>跨 MLX、vLLM 与 HuggingFace 后端的可复现多模型多基准评测运行器（GSM8K、MATH-500、AIME、U-MATH），用于论文 [<a class="ref" href="#J8">J8</a>]、[<a class="ref" href="#J10">J10</a>]、[<a class="ref" href="#S3">S3</a>] 与 [<a class="ref" href="#S4">S4</a>] 的实验。</p>
+  </div>
+  <div class="block">
+    <h3><a href="https://github.com/Kaleemullahqasim">论文仓库</a></h3>
+    <p>KV 缓存与多智能体两条主线的每篇论文对应一个公开仓库：KV-Direct、KV-Free-Transformers、sliding-window-wall、latent-collab-mas、RDC。完整实现随论文录用逐篇发布。</p>
+  </div>
+</section>
+
+<section id="cv">
+  <h2>教育背景</h2>
+  <ul class="rows">
+    <li><span class="when">2022 至 2026</span><span><b>计算机科学与技术博士</b>，西南交通大学计算机与人工智能学院。导师：张家树教授。2026 年 10 月 30 日通过博士学位论文答辩。</span></li>
+    <li><span class="when">2019 至 2022</span><span><b>计算机应用技术硕士</b>，西南财经大学，成都。研究方向：自然语言处理、机器学习、深度学习。</span></li>
+  </ul>
+
+  <h2>科研经历</h2>
+  <ul class="rows">
+    <li><span class="when">2026 至今</span><span><b>技术负责人，递归推理智能体系统。</b>华为技术有限公司委托、由西南交通大学承担的研究课题（项目负责人：张家树教授）。设计递归分解智能体的规划器与记忆模块，并在华为昇腾平台上实现强化学习训练闭环。</span></li>
+    <li><span class="when">2024 至今</span><span><b>合作研究员，时空推理方向</b>，吉达大学（Dr. Tariq Alsahfi）。合作发表 TraffiCoT-R [<a class="ref" href="#J2">J2</a>]，将思维链提示与多智能体协作结合，作用于 GIS 数据与图神经网络。</span></li>
+    <li><span class="when">2022 至 2024</span><span><b>合作研究员，AI 安全与网络测量方向</b>，浙江大学（许海涛）。在线联盟营销生态的实证测量研究，发表于 IEEE INFOCOM 2025 [<a class="ref" href="#C1">C1</a>]。</span></li>
+  </ul>
+
+  <h2>科研项目</h2>
+  <ul class="rows">
+    <li><span class="when">2026 至 2027</span><span><b>华为技术有限公司企业横向课题。</b>技术负责人。该课题于 RDoLT 论文 [<a class="ref" href="#J3">J3</a>] 发表后签订。</span></li>
+    <li><span class="when">2024 至今</span><span><b>国家自然科学基金项目（No. 62471411）。</b>参与研究（项目负责人：张家树教授）。</span></li>
+  </ul>
+
+  <h2>荣誉与奖学金</h2>
+  <ul class="rows">
+    <li><span class="when">2025、2026</span><span>国际学生优秀学术论文奖励，西南交通大学</span></li>
+    <li><span class="when">2022</span><span>中国政府奖学金（CSC），支持西南交通大学博士阶段学习</span></li>
+    <li><span class="when">2019</span><span>丝绸之路奖学金，支持西南财经大学硕士阶段学习</span></li>
+    <li><span class="when">2016</span><span>赴华学习奖学金，支持在北京语言大学学习两年</span></li>
+  </ul>
+
+  <h2>专业技能</h2>
+  <dl class="skills">
+    <dt>推理与对齐</dt><dd>递归分解、过程奖励模型、RLHF（PPO、REINFORCE）、DPO、GRPO、可验证奖励强化学习、TRL、verl、OpenRLHF</dd>
+    <dt>多智能体系统</dt><dd>智能体编排、任务分解、通信协议、智能体记忆、LangGraph、AutoGen、CrewAI、MCP</dd>
+    <dt>模型训练与推理</dt><dd>PyTorch、Hugging Face（Transformers、PEFT、Accelerate）、SFT、LoRA、QLoRA、vLLM、量化（GGUF、LUT、4/8 bit）、苹果芯片上的 MLX 与 Core ML、华为昇腾</dd>
+    <dt>检索与评测</dt><dd>RAG 架构、语义与词法混合检索、Qdrant、Pinecone、Weaviate、lm-evaluation-harness、OpenCompass</dd>
+    <dt>语言能力</dt><dd>英语（流利）、中文（HSK 5 级与 HSKK 中级）、乌尔都语（母语）、印地语（流利）</dd>
+  </dl>
+</section>
+
+</main>
+</div>
+
+<footer>&copy; 2026 Kaleem Ullah Qasim。最后更新：2026 年 11 月。</footer>
+
+</body>
+</html>
